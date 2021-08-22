@@ -1,0 +1,179 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	background-color: white;
+	color: black;
+}
+
+.dark-mode{
+	background-color: black;
+	color: white;
+}
+
+.dark-modeTwo{
+	color: white;
+}
+
+input {
+	background: rgb(243, 243, 203);
+}
+
+#button{
+	padding: 5px;
+	float: left;
+	margin-right: 10px;
+}
+
+.coolTheme {
+	font-weight: bold;
+	font-size: 18px;
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+#calculator {
+	max-width: 500px;
+	margin: 30px auto;
+	overflow: auto;
+	min-height: 300px;
+	border: 1px solid steelblue;
+	padding: 30px;
+	border-radius: 5px;
+}
+
+.navBar {
+	background-color: rgb(177, 172, 172);
+	color: black;
+}
+
+.navBar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.navBar li {
+	float: left;
+}
+
+.navBar li a:hover {
+	color: red;
+}
+
+hr.solid {
+	border-top: 3px solid #bbb;
+}
+
+#about{
+	padding: 10px;
+}
+
+#list{
+	padding: 20px;
+}
+
+#data{
+	padding: 10px;
+}
+
+#contact{
+	padding: 10px;
+}
+
+/* toggle switch */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+	
+}
+  
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+  
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+  
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+  
+input:checked + .slider {
+	background-color: rgb(44, 43, 43);
+}
+  
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+  
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+	border-color: white;
+}
+  
+.slider.round:before {
+	border-radius: 50%;
+}
+
+#light-dark-switch {
+	padding-top: 8px;
+	float: right;
+	margin-right: 3%;
+}
+
+/* sticky navBar */
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.content {
+	padding: 16px;
+}
+
+.sticky + .content{
+	padding-top: 60px;
+}

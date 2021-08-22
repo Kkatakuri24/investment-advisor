@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href= "myCss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="myScript.js"></script>
+    <title>Stock-Advisor</title>
+</head>
+<body>
+    <div class = "navBar">
+        <ul>
+            <li><a href="#calculator" class = "coolTheme">Calculator</a></li>
+            <li><a href="#about" class = "coolTheme">Learn about investing</a></li>
+            <li><a href="#data" class = "coolTheme">Data Section</a></li>
+            <li><a href= "#contact" class = "coolTheme">Contact</a></li>
+            <li id = "light-dark-switch">
+                <label class="switch">
+                    <input type="checkbox" onclick="darkmodeFunc()">
+                    <span class="slider round"></span>
+                </label>
+            </li>
+        </ul>
+    </div>
+
+    <div class = "content">
+    <!-- Calculator component -->
+    <div id = "calculator">
+        <h1>Investment Profit Calculator</h1><br>
+        <label for="buy-Price">Buy Price ($):</label><br>
+        <input type="text" id="buyPrice" name="buyPrice" placeholder="0"><br><br>
+
+        <label for="num-Shares">Number of Shares:</label><br>
+        <input type="text" id="numShares" name="numShares" placeholder="0"><br><br>
+
+        <label for="buy-Commission">Buy Commission ($):</label><br>
+        <input type="text" id="buyCom" name="buyCom" placeholder="0"><br><br>
+
+        <label for="sell-Price">Sell Price ($):</label><br>
+        <input type="text" id="sellPrice" name="sellPrice" placeholder="0"><br><br>
+
+        <label for="sell-Commission">Sell Commission ($):</label><br>
+        <input type="text" id="sellCom" name="sellCom" placeholder="0"><br><br>
+
+        <button id = "button" onclick="calculate()">Submit</button>
+        <button id = "button" onclick="reset()">Reset</button><br><br>
+        <p id = "profit">Total Profit: </p>
+        <p id = "ROI">Return on investment: </p>
+    </div>  
+
+    <!-- section divider -->
+    <hr class = "solid">
+
+    <div id = "about">
+        <h1>Learn about investing</h1>
+        <br>
+        <h2>Stocks</h2>
+        <br>
+        <p>Here, we are mainly going to talk about investing in stocks or publicly traded companies. In fact, we'll be analyzing some publicly available data to help assist us in making a decision to invest. </p> <br>
+        <p>There are some important things that we should be aware of before diving in to investing your money. Investing can be a great way to earn money but it also comes with a risk of losing money.</p> <br>
+        <p>Our objective here is to minimize our risk and maximize our chance to make the best return on investment (ROI). </p> <br>
+        <p>Basic important knowledge includes: </p>
+        <ol id = "list">
+            <li>Stock Price</li>
+            <li>Share Statistics</li>
+            <li>Balance Sheet</li>
+            <li>Price to earning ratio</li>
+            <li>Dividends</li>
+            <li>Chart and trends</li>
+            <li>Upcoming news and catalysts</li>
+        </ol>
+        <br>
+        <ol id = "list">
+            <li><h3>Stock Price</h3></li>
+            <p>Stock Price reflects the market's valuation of this particular company. This also affects the company's marketcap which tells the company's total value in terms of the shares issued by the company.</p> <br>
+            <li><h3>Share Statistics</h3></li>
+            <p>It is very important to know the share statistics of a company. For instance, how many total outstanding shares that exist and how many publicly tradable shares(float) exist.</p> <br>
+            <li><h3>Balance Sheet</h3></li>
+            <p>A company's balance sheet reflects how well the company is doing. This should show important information such as company's revenue, debt, cash on hand, liabilities.</p> <br>
+            <li><h3>Price to earning ratio</h3></li>
+            <p>The price-to-earnings ratio (P/E ratio) is the ratio for valuing a company that measures its current share price relative to its per-share earnings (EPS). P/E ratio is used to determine whether a company is undervalued or overvalued.</p> <br>
+            <li><h3>Dividends</h3></li>
+            <p>A dividend is a distribution of profits by a corporation to its shareholders. When a corporation earns a profit or surplus, it is able to pay a proportion of the profit as a dividend to shareholders. Any amount not distributed is taken to be re-invested in the business.</p> <br>
+            <li><h3>Chart and trends</h3></li>
+            <p>a stock chart is a graph that shows you the price of a stock over a specific period of time – for example, five years. More advanced stock charts will show additional data, and by understanding the basics you can pull out a lot of information about a stock's historic, current, and expected performance.</p> <br>
+            <li><h3>Upcoming news and catalysts</h3></li>
+            <p>Keeping track of a company's news and upcoming public information release can affect the price of the company's stock. Therefore, it is always a great idea to stay intellectually invested in the company that you've financially invested.</p> <br>
+        </ol>
+    </div>
+
+    <!-- section divider -->
+    <hr class = "solid">
+
+    <div id = "data">
+        <h1>Data Section</h1>
+        <br>
+        <label for="sell-Commission">Stock Symbole or Ticker: </label>
+        <input type="text" id="ticker" name="ticker" placeholder="Symbol"><br><br>
+        <button id = "button" onclick="checkSymbol()">Submit</button>
+        <button id = "button" onclick="resetSymbol()">Reset</button><br><br>
+        <div id = "displayData"></div>
+    </div>
+
+    <!-- section divider -->
+    <hr class = "solid">
+
+    <section id = "contact">
+        <h1>Contact me</h1>
+        <br>
+        <div class="footer-section-address">
+            <h2>Info</h2>
+            <div class= "f-content-1">
+                <div class="place" style="padding: 10px">
+                    <span class="fas fa-map-marker-alt"></span>
+                    <span class="text" style="padding: 10px">Nanaimo, British Columbia, Canada</span>
+                </div>
+                <div class="phone" style="padding: 10px">
+                    <span class="fas fa-phone-alt"></span>
+                    <span class="text" style="padding: 10px">+1(250)-713-7730</span>
+                </div>
+                <div class="email" style="padding: 10px">
+                    <span class="fas fa-envelope"></span>
+                    <span class="text" style="padding: 10px">joshua.nkt@gmail.com</span>
+                </div>
+                <div class="linkedin" style="padding: 10px">
+                    <i class="fab fa-linkedin"><a href="https://www.linkedin.com/in/joshua-kyi-39a348191/" style="padding: 10px;">My Linkedin profile</a></i>
+                </div>
+                <div class="github" style="padding: 10px">
+                    <i class="fab fa-github"><a href="https://github.com/Kkatakuri24" style="padding: 10px;">My Github profile</a></i>
+                </div>
+            </div>
+            <br>
+        </div>
+    </section>
+
+    <hr class = "solid">
+    </div>
+</body>
+</html>
